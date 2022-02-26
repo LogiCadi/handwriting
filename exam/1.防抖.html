@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.防抖</title>
+  </head>
+  <body>
+    <script>
+      // 如果短时间内大量触发同一事件，只会执行最后一次函数。
+      // https://segmentfault.com/a/1190000018428170
+      // 场景举例：页面resize事件，常见于需要做页面适配的时候。需要根据最终呈现的页面情况进行dom渲染（这种情形一般是使用防抖，因为只需要判断最后一次的变化情况）
+
+      function debounce(fn, delay) {
+        // TODO:
+        return function(){
+          
+        }
+      }
+
+      // 测试
+      function task() {
+        console.log("run task");
+      }
+      const debounceTask = debounce(task, 500);
+      document.addEventListener("mousemove", debounceTask);
+    </script>
+  </body>
+</html>
